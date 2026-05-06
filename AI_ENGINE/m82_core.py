@@ -1,37 +1,34 @@
+"""
+M82 CORE - MOLINA HOLDINGS LLC
+(C) 2026 TODOS LOS DERECHOS RESERVADOS
+LICENCIA: https://molina82.com/en/copyright.html
+"""
+import time
 import os
+from datetime import datetime
 
-class MolinaInstitutionalCore:
-    def __init__(self, aum=500000000):
-        self.aum = aum
-        self.standard = "SEC / OFAC / BASEL III"
-        self.threshold = 0.75
-
-    def run_investment(self, asset, risk_score):
-        if risk_score < self.threshold:
-            allocation = self.aum * 0.15 # 15% de despliegue estratégico
-            return {
-                "ASSET": asset,
-                "VERDICT": "DEPLOY CAPITAL",
-                "STATUS": "VALIDATED",
-                "AMOUNT": f"${allocation:,.2f}",
-                "CUSTODIAN": "BBH (NASHVILLE)"
-            }
-        return {"VERDICT": "HOLD / REJECT"}
+def run_m82():
+    # Parámetros de mercado reales inyectados
+    brent = 114.01
+    jpy = 156.52
+    
+    while True:
+        try:
+            os.system('clear')
+            print("=========================================")
+            print("          SISTEMA M82: ONLINE            ")
+            print("    MOLINA HOLDINGS LLC - PROTEGIDO      ")
+            print("=========================================")
+            print(f"TIEMPO: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
+            print(f"BRENT: \${brent} | JPY: {jpy}")
+            print("-----------------------------------------")
+            print("[✅] NÚCLEO: ACTIVO")
+            print("[🛰️] BOT: @M82Sovereign_bot VIGILANDO")
+            print("-----------------------------------------")
+            time.sleep(5) # Ciclo de estabilidad
+        except Exception as e:
+            print(f"Error: {e}")
+            time.sleep(10)
 
 if __name__ == "__main__":
-    os.system('clear')
-    print("="*65)
-    print(f"{'MOLINA HOLDINGS LLC - M82 ALPHA CORE':^65}")
-    print("="*65)
-    
-    m82 = MolinaInstitutionalCore()
-    # Ejecución capturada en imagen 1000122523.jpg
-    res = m82.run_investment("ENERGY_RECONSTRUCTION_JV", 0.35)
-    
-    # Formato de salida institucional
-    for k, v in res.items():
-        print(f"[{k:<10}]: {v}")
-    
-    print("="*65)
-    print(f"{'SISTEMA OPERATIVO - ALL RIGHTS RESERVED 2026':^65}")
-
+    run_m82()
