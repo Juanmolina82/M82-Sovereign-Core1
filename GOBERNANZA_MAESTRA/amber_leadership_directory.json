@@ -1,0 +1,23 @@
+{
+    "leadership": [
+        {
+            "name": "Gregory Goff",
+            "role": "CEO, Amber Energy",
+            "focus": "Refining Operations & Strategic Investment",
+            "priority": "HIGH"
+        },
+        {
+            "name": "Jeff Stevens",
+            "role": "President, Amber Energy",
+            "focus": "Supply Chain & Midstream Logistics",
+            "priority": "HIGH"
+        },
+        {
+            "name": "Paul Singer",
+            "role": "Founder, Elliott Investment Mgmt",
+            "focus": "Capital Structure & Legal Strategy",
+            "priority": "ULTIMATE"
+        }
+    ],
+    "m82_angle": "Proponer alianza operativa basada en el Pilar #4 (Márgenes 60-70%) y Pilar #6 (Suministro 1.23M bpd)."
+}
