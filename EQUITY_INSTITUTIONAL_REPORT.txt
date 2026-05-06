@@ -1,0 +1,9 @@
+--- MOLINA HOLDINGS: EQUITY INTEL REPORT (2026-05-06 16:53) ---
+Status: FLIGHT TO QUALITY DETECTED
+----------------------------------------------------------
+✅ SMCI (Infraestructura Física IA): $34.66 | Var: +24.54%
+✅ AMD (Cómputo Estratégico): $421.39 | Var: +18.61%
+✅ NVDA (Alpha Leader): $207.83 | Var: +5.77%
+✅ GS (Motor Financiero Global): $937.35 | Var: +2.01%
+✅ CAT (Infraestructura Real): $926.93 | Var: +2.47%
+✅ JPM (Liquidez Bancaria): $314.90 | Var: +1.78%

@@ -1,0 +1,12 @@
+--- MASTER ARCHITECTURE V3.2 | FULL SPECTRUM: 2026-05-06 17:20 ---
+STATUS: GLOBAL LIQUIDITY MONITOR ACTIVE
+----------------------------------------------------------
+✅ SMCI   (IA Hardware       ): $     34.66 | Var: +24.54%
+✅ AMD    (Semiconductores   ): $    421.39 | Var: +18.61%
+✅ GS     (Big Bank Intel    ): $    937.35 | Var: +2.01%
+✅ GC=F   (Gold (Refugio)    ): $   4703.10 | Var: +3.23%
+✅ CL=F   (Crude Oil (Energía)): $     96.21 | Var: -5.93%
+✅ ZS=F   (Soya (Agro-Hedge) ): $   1194.25 | Var: -0.13%
+✅ HG=F   (Copper (Doctor Copper/Industria)): $      6.19 | Var: +4.22%
+✅ ES=F   (S&P 500 Futuros   ): $   7386.75 | Var: +1.37%
+✅ NQ=F   (Nasdaq 100 Futuros): $  28712.25 | Var: +2.05%
