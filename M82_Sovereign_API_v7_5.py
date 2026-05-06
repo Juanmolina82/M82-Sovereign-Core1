@@ -1,25 +1,33 @@
 from flask import Flask, request, jsonify
 import datetime
+import sqlite3
+import os
 
 app = Flask(__name__)
 
-sov_vault = {
-    "market_sentiment": "FALSE_EUPHORIA",
-    "oil_status": "STRUCTURED_PAUSE",
-    "employment_quality": "LOW_PAY_PART_TIME"
-}
+def init_db():
+    conn = sqlite3.connect('M82_Intel_Vault.db')
+    c = conn.cursor()
+    c.execute('CREATE TABLE IF NOT EXISTS intel_logs (id INTEGER PRIMARY KEY AUTOINCREMENT, timestamp TEXT, news TEXT, impact TEXT)')
+    conn.commit()
+    conn.close()
 
 @app.route('/agi/v7/inject_intel', methods=['POST'])
 def inject_intel():
     data = request.json
-    report_impact = "POSITIVE_FOR_SOVEREIGN_DEBT_ARBITRAGE"
-    entry = {
-        "timestamp": datetime.datetime.now().isoformat(),
-        "payload": data,
-        "m82_inference": report_impact
-    }
-    return jsonify({"status": "INTEL_SECURED", "node": "SOVEREIGN-V7", "analysis": entry}), 201
+    news = data.get('news', 'N/A')
+    impact = data.get('impact', 'N/A')
+    ts = datetime.datetime.now().isoformat()
+    try:
+        conn = sqlite3.connect('M82_Intel_Vault.db')
+        c = conn.cursor()
+        c.execute("INSERT INTO intel_logs (timestamp, news, impact) VALUES (?, ?, ?)", (ts, news, impact))
+        conn.commit()
+        conn.close()
+        return jsonify({"status": "INTEL_SECURED", "db": "ARCHIVED", "timestamp": ts}), 201
+    except Exception as e:
+        return jsonify({"status": "ERROR", "message": str(e)}), 500
 
 if __name__ == '__main__':
-    print("[*] M82 API: Nodo Soberano Activo en puerto 8080...")
+    init_db()
     app.run(port=8080)
