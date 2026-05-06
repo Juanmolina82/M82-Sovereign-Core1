@@ -23,3 +23,15 @@ def check_venezuela_pulse():
 
 if __name__ == "__main__":
     check_venezuela_pulse()
+
+def analyze_us_pressure():
+    print("\n🦅 US STATE DEPT WATCH: PLAN MARCO RUBIO")
+    print("----------------------------------------------------------")
+    print("🗓️ DEADLINE ELECCIONES: Mayo 2027 (Max 12 meses)")
+    print("🛡️ ESCUDO CITGO (OFAC): Activo hasta el 19-JUN-2026")
+    print("⚠️ RIESGO: Si no hay acuerdo político, el 19-JUN se activa el colateral.")
+    
+    # Alerta de voz para el News Room
+    os.system("termux-tts-speak 'Chairman, US has extended Citgo protection to June 19. The 12-month election clock is ticking.'")
+
+analyze_us_pressure()
